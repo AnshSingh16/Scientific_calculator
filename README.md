@@ -29,5 +29,5 @@ It supports both **Standard** and **Scientific** modes, has a **dark/light theme
 
 ## 🖼️ Preview
 
-screenshot.png
+![Calculator Preview](screenshot.png)
 
