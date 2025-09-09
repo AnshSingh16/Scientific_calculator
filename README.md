@@ -29,10 +29,5 @@ It supports both **Standard** and **Scientific** modes, has a **dark/light theme
 
 ## 🖼️ Preview
 
-![Calculator Preview](screenshot.png)  
-*(Add your screenshot here once you run the project)*
-
----
-
-## 📂 Project Structure
+screenshot.png
 
