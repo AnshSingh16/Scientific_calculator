@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="toggle-container">
+            <!-- Mode Toggle -->
+            <label class="switch">
+                <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+                <span class="slider"></span>
+            </label>
+            <span id="modeLabel">Standard Mode</span>
+
+            <!-- Theme Toggle -->
+            <label class="switch" style="margin-left:10px;">
+                <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+                <span class="slider"></span>
+            </label>
+            <span id="themeLabel">Dark Mode</span>
+        </div>
+
+        <div class="calculator" id="calculator">
+            <!-- History Panel -->
+            <div class="history-container" id="historyContainer">
+                <h3>History</h3>
+                <ul id="historyList"></ul>
+            </div>
+
+            <!-- Display -->
+            <input type="text" id="display" disabled placeholder="0">
+
+            <!-- Memory & Clear -->
+            <div class="row standard-row">
+                <button class="func-btn" onclick="memoryClear()">MC</button>
+                <button class="func-btn" onclick="memoryRecall()">MR</button>
+                <button class="func-btn" onclick="memoryAdd()">M+</button>
+                <button class="func-btn" onclick="memorySubtract()">M-</button>
+            </div>
+
+            <div class="row standard-row">
+                <button class="func-btn" onclick="clearDisplay()">C</button>
+                <button class="func-btn" onclick="deleteLast()">⌫</button>
+                <button class="func-btn" onclick="appendOperator('(')">(</button>
+                <button class="func-btn" onclick="appendOperator(')')">)</button>
+            </div>
+
+            <!-- Number Buttons -->
+            <div class="row">
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="op-btn" onclick="appendOperator('/')">÷</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="op-btn" onclick="appendOperator('*')">×</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="op-btn" onclick="appendOperator('-')">−</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button class="eq-btn" onclick="calculateResult()">=</button>
+                <button class="op-btn" onclick="appendOperator('+')">+</button>
+            </div>
+
+            <!-- Scientific Buttons (hidden in Standard Mode) -->
+            <div class="scientific" id="scientific">
+                <div class="row">
+                    <button class="sci-btn" onclick="scientific('sqrt')">√</button>
+                    <button class="sci-btn" onclick="scientific('x²')">x²</button>
+                    <button class="sci-btn" onclick="scientific('x³')">x³</button>
+                    <button class="sci-btn" onclick="scientific('factorial')">x!</button>
+                </div>
+                <div class="row">
+                    <button class="sci-btn" onclick="scientific('sin')">sin</button>
+                    <button class="sci-btn" onclick="scientific('cos')">cos</button>
+                    <button class="sci-btn" onclick="scientific('tan')">tan</button>
+                    <button class="sci-btn" onclick="scientific('pi')">π</button>
+                </div>
+                <div class="row">
+                    <button class="sci-btn" onclick="scientific('asin')">asin</button>
+                    <button class="sci-btn" onclick="scientific('acos')">acos</button>
+                    <button class="sci-btn" onclick="scientific('atan')">atan</button>
+                    <button class="sci-btn" onclick="scientific('exp')">eˣ</button>
+                </div>
+                <div class="row">
+                    <button class="sci-btn" onclick="scientific('sinh')">sinh</button>
+                    <button class="sci-btn" onclick="scientific('cosh')">cosh</button>
+                    <button class="sci-btn" onclick="scientific('tanh')">tanh</button>
+                    <button class="sci-btn" onclick="scientific('log')">log</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
