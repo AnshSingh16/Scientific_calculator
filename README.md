@@ -3,7 +3,7 @@
 A modern **Scientific Calculator** built with **HTML, CSS, and JavaScript**.  
 It supports both **Standard** and **Scientific** modes, has a **dark/light theme toggle**, **memory functions**, **calculation history**, and full **keyboard support**.
 
----
+<a href="https://anshsingh16.github.io/Scientific_calculator/">QIUCK LINK </a>
 
 ## ✨ Features
 
